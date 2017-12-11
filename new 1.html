@@ -1,0 +1,67 @@
+<html>
+<head>
+
+     <link href="new 1.css" rel="stylesheet" type="text/css">
+	 <script type="text/javascript" src="2.js"></script>
+</head>
+<body>
+
+<div class="calculator">
+   
+    <form class="calculator__form">
+       
+        <div class="calculator__row">
+            <INPUT NAME="display" VALUE="0" SIZE="28" MAXLENGTH="25">
+        </div>
+    
+        <div class="calculator__row">
+           <INPUT type="button" value="c" class="calculator__key calculator__clear"ONCLICK="this.form.display.value = 0 ">
+            <INPUT type="button" value="<--" class="calculator__key calculator__backspace"ONCLICK="deleteChar(this.form.display)">
+            <INPUT type="button" value="ln" class="calculator__key calculator__power"ONCLICK="if (checkNum(this.form.display.value)) { ln(this.form) }">
+            <INPUT type="button" value="+" class="calculator__key calculator__button"  ONCLICK="addChar(this.form.display, '+')">
+        </div>
+       
+        <div class="calculator__row">
+            <INPUT type="button" value="9" class="calculator__key calculator__button" ONCLICK="addChar(this.form.display, '9')">
+            <INPUT type="button" value="8" class="calculator__key calculator__button"ONCLICK="addChar(this.form.display, '8')">
+            <INPUT type="button" value="7" class="calculator__key calculator__button" ONCLICK="addChar(this.form.display, '7')">
+            <INPUT type="button" value="-" class="calculator__key calculator__button"ONCLICK="addChar(this.form.display, '-')">
+        </div>
+       
+        <div class="calculator__row">
+            <INPUT type="button" value="6" class="calculator__key calculator__button"ONCLICK="addChar(this.form.display, '6')">
+            <INPUT type="button" value="5" class="calculator__key calculator__button"ONCLICK="addChar(this.form.display, '5')">
+            <INPUT type="button" value="4" class="calculator__key calculator__button"ONCLICK="addChar(this.form.display, '4')">
+            <INPUT type="button" value="*" class="calculator__key calculator__button"ONCLICK="addChar(this.form.display, '*')">
+        </div>
+      
+        <div class="calculator__row">
+            <INPUT type="button" value="3" class="calculator__key calculator__button"ONCLICK="addChar(this.form.display, '3')">
+            <INPUT type="button" value="2" class="calculator__key calculator__button"ONCLICK="addChar(this.form.display, '2')">
+            <INPUT type="button" value="1" class="calculator__key calculator__button"ONCLICK="addChar(this.form.display, '1')">
+            <INPUT type="button" value="/" class="calculator__key calculator__button"ONCLICK="addChar(this.form.display, '/')">
+        </div>
+       
+        <div class="calculator__row">
+            <INPUT type="button" value="0" class="calculator__key calculator__button"ONCLICK="addChar(this.form.display, '0')">
+            <INPUT type="button" value="." class="calculator__key calculator__button"ONCLICK="addChar(this.form.display, '.')">
+           <INPUT type="button" value="=" class="calculator__key calculator__key--equal" ONCLICK="if (checkNum(this.form.display.value)) { compute(this.form) }">
+        </div>
+		<div class="calculator__row">
+            <INPUT type="button" value="(" class="calculator__key calculator__button"ONCLICK="addChar(this.form.display, '(')">
+            <INPUT type="button" value=")" class="calculator__key calculator__button"ONCLICK="addChar(this.form.display, ')')">
+			<INPUT type="button" value="cos" class="calculator__key calculator__button"ONCLICK="if (checkNum(this.form.display.value)) { cos(this.form) }">
+           <INPUT type="button" value="sin" class="calculator__key calculator__button"ONCLICK="if (checkNum(this.form.display.value)) { sin(this.form) }">
+        </div>
+		<div class="calculator__row">
+            <INPUT type="button" value="sqrt" class="calculator__key calculator__key--equal"ONCLICK="if (checkNum(this.form.display.value)) { sqrt(this.form) }">
+            <INPUT type="button" value="tan" class="calculator__key calculator__key--equal"ONCLICK="if (checkNum(this.form.display.value)) { tan(this.form) }">
+            
+        </div>
+    </form>
+	
+</div>
+
+ <script type="text/javascript" src="2.js"></script>
+</body>
+</html>
